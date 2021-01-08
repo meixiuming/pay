@@ -1,0 +1,45 @@
+#默认使用配置
+spring:
+  profiles:
+    active: acp_sdk
+  application:
+    name: pay
+  resources: 
+    static-locations: file:///home/static,classpath:/static
+  thymeleaf: 
+   #模板的模式，支持 HTML, XML TEXT JAVASCRIPT
+   mode: HTML5
+   #编码 可不用配置
+   encoding: UTF-8
+   #开发配置为false,避免修改模板还要重启服务器
+   cache: false
+   #配置模板路径，默认是templates，可以不用配置
+   prefix: classpath:/static/html/
+   suffix: .html
+
+
+server:
+  port: 8084
+  servlet: 
+    context-path: /
+
+
+#merId:  "QRC480205000029"    #商户状态不正确[2500103]
+#merId:  "802440360510551"
+#merId:  "802440360510553"
+#merId:  "865360055110003"  #电视使用
+#merId:  "861440349000173"  #charge使用
+#merId:  "865584073940001"  #iot    inst_sign证书签名不正确(无感支付开通),[9100004]Signature verification failed
+#merId:  "QRC485200007541"  #iot   inst_sign证书不对
+merId:  "898319953310612"  #iot   掌腾的证书
+
+
+
+
+
+
+
+
+
+
+
